@@ -87,7 +87,7 @@ Distribution of the class by person:
 ggplot(trainset, aes(x=classe)) + geom_bar(aes(fill=user_name))
 ```
 
-![](MLweek4_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](unnamed-chunk-6-1.png)<!-- -->
 
 Class A is the most commonly seen class. Adelmo is the user with the most recorded exercises. 
 
@@ -267,7 +267,7 @@ DTfit <- rpart(classe ~ ., data=trainset, method="class")
 rpart.plot(DTfit)
 ```
 
-![](MLweek4_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](unnamed-chunk-13-1.png)<!-- -->
 
 Use this model to predict the class of our testdata:
 
@@ -466,7 +466,7 @@ ggplot(GBMfit)
 ## Warning: Ignoring unknown aesthetics: shape
 ```
 
-![](MLweek4_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
+![](unnamed-chunk-17-1.png)<!-- -->
 
 
 #Conclusion 
