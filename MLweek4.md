@@ -3,14 +3,14 @@ Hannah Patrick
 10/15/2017  
 
 
-#Introduction
+# Introduction
 One thing that people regularly do is quantify how much of a particular activity they do, but they rarely quantify how well they do it. 
 
 In this project, the goal will be to use data from accelerometers on the belt, forearm, arm, and dumbell of 6 participants to predict the manner in which they did the exercise. This is the "classe" variable in the training set. 
 
 
 
-#Data
+# Data
 
 Using devices such as Jawbone Up, Nike FuelBand, and Fitbit it is now possible to collect a large amount of data about personal activity relatively inexpensively. One thing that people regularly do is quantify how much of a particular activity they do, but they rarely quantify how well they do it. 
 
@@ -31,7 +31,7 @@ The data for this project come from this source: http://web.archive.org/web/2016
 
 
 
-#Data Exploration
+# Data Exploration
 ## Data Preparation/Cleaning
 
 Read in the data:
@@ -68,7 +68,7 @@ trainset <- traindata[inTrain, ]
 testset <- traindata[-inTrain, ]
 ```
 
-##Exploration
+## Exploration
 Distribution of the seen classes:
 
 ```r
@@ -249,7 +249,7 @@ names(trainset)
 
 
 
-#Creating Models 
+# Creating Models 
 Several models were created and compared using the accuracy on our test data set.
 
 ## Decision Trees
@@ -314,7 +314,7 @@ DTcm
 
 From the above metrics we can see that the model produced the correct prediction 82% of the time. It was most accurate with Class A and least accurate at predicting Class D.
 
-##Random Forests
+## Random Forests
 
 Create the random forest model:
 
@@ -364,7 +364,7 @@ RFcm
 From the above metrics we can see that the model produced near perfect predictions for all classes. With an overall accuracy of 0.9986 this is considerably better than the decision tree model. 
 
 
-##Boosted Trees
+## Boosted Trees
 
 The final model to be tested here is a gradient boosted machine using cross validation. 
 This takes longer to run than the other models:
@@ -469,12 +469,14 @@ ggplot(GBMfit)
 ![](unnamed-chunk-17-1.png)<!-- -->
 
 
-#Conclusion 
+# Conclusion
+
 Using a random forest model produced the best results in this instance, with an accuracy of 0.9986% on the test dataset. This was considerably better than the decision tree and marginally better than the Gradient boosted method. The expected out of sample error rate is (1-0.9986)*100 = 0.14%. 
 
 
 
-#Results on test set
+# Results on test set
+
 The results for the 20 test examples are as follows:
 
 
